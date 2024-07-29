@@ -43,3 +43,24 @@ body {
  font-weight: bold;
 }
 .login-text{}
+
+
+/* mobile responsive code  */
+@media (max-width: 480px) {
+ .login-form-area {
+  padding: .625rem;
+ }
+
+ h1 {
+  font-size: 1.25rem;
+ }
+
+ h4 {
+  font-size: 1rem;
+ }
+
+ input,
+ button {
+  font-size: 0.875rem;
+ }
+}
