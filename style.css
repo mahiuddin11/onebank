@@ -35,7 +35,7 @@ body {
  background-color: #ffffff54;
  text-align: center;
  display: block;
- 
+
 }
 
 .heading {
@@ -44,30 +44,63 @@ body {
  font-size: 5rem;
  font-weight: bold;
 }
-.login-text{}
 
-#deshbord-aria{
+.login-text {}
+
+#deshbord-aria {
  color: aliceblue;
  display: none;
 }
-.dashbordAria{
+
+.dashbordAria {
  width: 62.5rem;
 }
-.blanceCard{
+
+.blanceCard {
  padding: 1.25rem;
  border-radius: .625rem;
  box-shadow: 0.3125rem 0.3125rem 0.625rem #2e2a2a;
 }
-.diposit{
+
+.diposit {
  background-color: #01af5ee3;
 }
-.withdrow{
+
+.withdrow {
  background-color: #ef3b08ed;
 }
-.Credit{
- background-color:#ff7f00f5;
+
+.Credit {
+ background-color: #ff7f00f5;
 }
 
+.card {
+background-color: #ececec78;
+ padding: 3.25rem 3.7rem;
+
+}
+
+.card h5 {
+ padding-bottom: 0.625rem;
+ font-size: 30px;
+ font-weight: 600;
+ color: #fffaf0fc;
+}
+.card input{
+ margin-bottom: 0.625rem;
+  padding: 12px;
+  border-radius: 5px;
+  border-style: none;
+  background-color: #fff9;
+}
+
+.card textarea{margin-bottom: .625rem;
+ padding: 16px;
+ border-radius: 5px;
+ border: none;
+ fill: #cc2424;
+ color: #fff8f8;
+ background: #dddddd80;}
 /* mobile responsive code  */
 @media (max-width: 480px) {
  .login-form-area {
