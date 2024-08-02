@@ -34,6 +34,8 @@ body {
  box-shadow: 0.3125rem 0.3125rem 0.625rem #ffffff82;
  background-color: #ffffff54;
  text-align: center;
+ display: block;
+ 
 }
 
 .heading {
@@ -44,6 +46,26 @@ body {
 }
 .login-text{}
 
+#deshbord-aria{
+ color: aliceblue;
+ display: none;
+}
+.dashbordAria{
+ width: 62.5rem;
+}
+.blanceCard{
+ padding: 1.25rem;
+ border-radius: .625rem;
+}
+.diposit{
+ background-color: #01af5ee3;
+}
+.withdrow{
+ background-color: #ef3b08ed;
+}
+.Credit{
+ background-color:#ff7f00f5;
+}
 
 /* mobile responsive code  */
 @media (max-width: 480px) {
