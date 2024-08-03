@@ -44,61 +44,70 @@
 
       <!-- deshboard section  -->
       <div id="deshbord-aria" class="dashbordAria">
-
-        <div class="row ">
-          <div class="col-md-4 ">
-              <div class="diposit blanceCard">
-                <h5>Deposit</h5>
-                <h2>$00</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="diposit blanceCard">
+              <h5>Deposit</h5>
+              <h2>$ <span id="currentDiposit">00</span></h2>
             </div>
           </div>
-          <div class="col-md-4 ">
-              <div class="withdrow blanceCard">
-                <h5>Withdraw</h5>
-                 <h2>$00</h2>
-              </div>
+          <div class="col-md-4">
+            <div class="withdrow blanceCard">
+              <h5>Withdraw</h5>
+              <h2>$ <span id="currentWithdrow">00</span></h2>
+            </div>
           </div>
-          <div class="col-md-4 ">
+          <div class="col-md-4">
             <div class="Credit blanceCard">
               <h5>Blance</h5>
-              <h2>$200</h2>
+              <h2>$ <span id="">00</span></h2>
             </div>
           </div>
         </div>
 
-      <!-- blance add section -->
-       <div class="row m-5">
-          <div class="col-md-6 ">
-            <div class="card blanceCard d-flex justify-content-center flex-column">
+        <!-- blance add section -->
+        <div class="row m-5">
+          <div class="col-md-6">
+            <div
+              class="card blanceCard d-flex justify-content-center flex-column"
+            >
               <h5>Diposit</h5>
-            <input type="text" id="diposit" name="diposit" placeholder="Enter youe blance"> 
-            <!-- <textarea name="text" id=""  placeholder="Discaption"></textarea> -->
-              <button   id="addMony" class="btn btn-primary ">Add Mony</button>
+              <input
+                type="text"
+                id="diposit"
+                name="diposit"
+                placeholder="Enter youe blance"
+              />
+              <!-- <textarea name="text" id=""  placeholder="Discaption"></textarea> -->
+              <button id="addMony" class="btn btn-primary">Add Mony</button>
             </div>
           </div>
           <div class="col-md-6">
-            <div class="card blanceCard d-flex justify-content-center flex-column">
+            <div
+              class="card blanceCard d-flex justify-content-center flex-column"
+            >
               <h5>Withdraw</h5>
-              <input type="text" name="withdrow"  placeholder="Enter youe blance"> 
+              <input
+                type="text"
+                name="withdrow"
+                placeholder="Enter youe blance"
+              />
               <!-- <textarea name="text" id=""  placeholder=" Discaption"></textarea> -->
-              <button class="btn btn-primary  ">Withdrow Mony</button>
+              <button class="btn btn-primary">Withdrow Mony</button>
             </div>
           </div>
-       </div>
-       <hr>
-       <div class="buttongroup">
-           <ul>
-        <li><a href="#" class=" text-white">Trangtion</a></li>
-        <li><a href="#" class=" text-white">Repots</a></li>
-        <li><a href="#" class=" text-white">Account</a></li>
-       </ul>
-       </div>
-      
-       <hr>
+        </div>
+        <hr />
+        <div class="buttongroup">
+          <ul>
+            <li><a href="#" class="text-white">Trangtion</a></li>
+            <li><a href="#" class="text-white">Repots</a></li>
+            <li><a href="#" class="text-white">Account</a></li>
+          </ul>
+        </div>
 
+        <hr />
       </div>
-      
-      
     </div>
 
     <!-- boostrap script -->
@@ -115,22 +124,27 @@
       video.playbackRate = 0.4;
 
       var loginBtn = document.getElementById("btnLogin");
-      loginBtn.addEventListener("click", function (event) {
-        
+      loginBtn.addEventListener("click", function () {
         var loginAria = document.getElementById("loginFromAria");
         loginAria.style.display = "none";
 
         var deshboard = document.getElementById("deshbord-aria");
         deshboard.style.display = "block";
 
-
-        //diposite hindlyer 
+        //diposite hindlyer
         var addMony = document.getElementById("addMony");
-            addMony.addEventListener("click",function(){
-              //amunt store
-              var dipostiAmount = document.getElementById("diposit").value; ///inpute fill value find p
-                  
-            });
+        addMony.addEventListener("click", function () {
+          //amunt store
+          var dipostiAmount = document.getElementById("diposit").value; ///inpute fill value find p
+          var dipostiAmountNumber = parseFloat(dipostiAmount); // convert string to number usr parsefload function
+          //diposide blance card find
+          var currentDiposit = document.getElementById("currentDiposit").innerText;
+          var currentDipositNumber = parseFloat(currentDiposit);
+
+          var totalDiposit = currentDipositNumber + dipostiAmountNumber;
+           var currentDiposit = document.getElementById("currentDiposit").innerText = totalDiposit;
+           document.getElementById("diposit").value = ""; // when submit value then submit amount refresh 0
+        });
       });
     </script>
   </body>
