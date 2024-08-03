@@ -70,10 +70,10 @@
        <div class="row m-5">
           <div class="col-md-6 ">
             <div class="card blanceCard d-flex justify-content-center flex-column">
-              <h5>Deposit</h5>
-            <input type="text" name="diposit" placeholder="Enter youe blance"> 
+              <h5>Diposit</h5>
+            <input type="text" id="diposit" name="diposit" placeholder="Enter youe blance"> 
             <!-- <textarea name="text" id=""  placeholder="Discaption"></textarea> -->
-              <button class="btn btn-primary ">Add Mony</button>
+              <button   id="addMony" class="btn btn-primary ">Add Mony</button>
             </div>
           </div>
           <div class="col-md-6">
@@ -116,13 +116,21 @@
 
       var loginBtn = document.getElementById("btnLogin");
       loginBtn.addEventListener("click", function (event) {
-        console.log("amare click marche ");
-
+        
         var loginAria = document.getElementById("loginFromAria");
         loginAria.style.display = "none";
 
         var deshboard = document.getElementById("deshbord-aria");
         deshboard.style.display = "block";
+
+
+        //diposite hindlyer 
+        var addMony = document.getElementById("addMony");
+            addMony.addEventListener("click",function(){
+              //amunt store
+              var dipostiAmount = document.getElementById("diposit").value; ///inpute fill value find p
+                  
+            });
       });
     </script>
   </body>
