@@ -88,12 +88,15 @@
             >
               <h5>Withdraw</h5>
               <input
+                id="withdrow"
                 type="text"
                 name="withdrow"
                 placeholder="Enter youe blance"
               />
               <!-- <textarea name="text" id=""  placeholder=" Discaption"></textarea> -->
-              <button class="btn btn-primary">Withdrow Mony</button>
+              <button id="withdrowMony" class="btn btn-primary">
+                Withdrow Mony
+              </button>
             </div>
           </div>
         </div>
@@ -132,19 +135,39 @@
         deshboard.style.display = "block";
 
         //diposite hindlyer
-        var addMony = document.getElementById("addMony");
-        addMony.addEventListener("click", function () {
+        var addMonyBtn = document.getElementById("addMony");
+        addMonyBtn.addEventListener("click", function () {
           //amunt store
           var dipostiAmount = document.getElementById("diposit").value; ///inpute fill value find p
           var dipostiAmountNumber = parseFloat(dipostiAmount); // convert string to number usr parsefload function
           //diposide blance card find
-          var currentDiposit = document.getElementById("currentDiposit").innerText;
+          var currentDiposit =
+            document.getElementById("currentDiposit").innerText;
           var currentDipositNumber = parseFloat(currentDiposit);
 
           var totalDiposit = currentDipositNumber + dipostiAmountNumber;
-           var currentDiposit = document.getElementById("currentDiposit").innerText = totalDiposit;
-           document.getElementById("diposit").value = ""; // when submit value then submit amount refresh 0
+          var currentDiposit = document.getElementById("currentDiposit").innerText = totalDiposit;
+          document.getElementById("diposit").value = ""; // when submit value then submit amount refresh 0
         });
+
+        // withdrow opction
+        var withdrowMonyBtn = document.getElementById("withdrowMony");
+        withdrowMonyBtn.addEventListener("click", function () {
+          var withdrawAmount = document.getElementById("withdrow").value;
+          withdrawAmount = parseFloat(withdrawAmount);
+
+          var withdrawCard_blance =
+            document.getElementById("currentWithdrow").innerText;
+          withdrawCard_blance = parseFloat(withdrawCard_blance);
+          
+          var totalWithdraw = withdrawCard_blance + withdrawAmount;
+          var currentDiposit = document.getElementById("currentWithdrow").innerText = totalWithdraw;
+         
+
+          
+        });
+
+        //login section end
       });
     </script>
   </body>
