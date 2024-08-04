@@ -25,25 +25,44 @@
           var totalDiposit = currentDipositNumber + dipostiAmountNumber;
           var currentDiposit = document.getElementById("currentDiposit").innerText = totalDiposit;
           document.getElementById("diposit").value = "0"; // when submit value then submit amount refresh 0
+         
+
+        // currentBlance Add 
+        var CardBlance = document.getElementById("currentBlance").innerText;
+            CardBlance = parseFloat(CardBlance);
+
+          var  totalBlance = CardBlance + dipostiAmountNumber ;
+          var currentDiposit = document.getElementById("currentBlance").innerText = totalBlance;
+
+
         });
+        
 
         // withdrow opction
         var withdrowMonyBtn = document.getElementById("withdrowMony");
         withdrowMonyBtn.addEventListener("click", function () {
           var withdrawAmount = document.getElementById("withdrow").value;
           withdrawAmount = parseFloat(withdrawAmount);
-          console.log(withdrawAmount);
+          
 
           var withdrawCard_blance = document.getElementById("currentWithdrow").innerText;
           withdrawCard_blance = parseFloat(withdrawCard_blance);
-            console.log(withdrawCard_blance);
-
 
           var totalwithdrow = withdrawCard_blance + withdrawAmount;
-          var currentDiposit = document.getElementById("currentWithdrow").innerText = totalwithdrow;
+
+          var withdrawCard_blance = document.getElementById("currentWithdrow").innerText = totalwithdrow;
           document.getElementById("withdrow").value = "0"; // when submit value then submit amount refresh 0
           
+          
         });
+
+         
+        // Blance section code 
+       
+
+       
+            
+        
 
         //login section end
       });
