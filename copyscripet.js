@@ -19,15 +19,14 @@
           var dipostiAmountNumber = parseFloat(dipostiAmount); // convert string to number usr parsefload function
 
 
-          // //diposide blance card find
-          // var currentDiposit = document.getElementById("currentDiposit").innerText;
-          // var currentDipositNumber = parseFloat(currentDiposit);
-          // var totalDiposit = currentDipositNumber + dipostiAmountNumber;
-          // var currentDiposit = document.getElementById("currentDiposit").innerText = totalDiposit;
-          // document.getElementById("diposit").value = "0"; // when submit value then submit amount refresh 0
+          //diposide blance card find
+          var currentDiposit = document.getElementById("currentDiposit").innerText;
+          var currentDipositNumber = parseFloat(currentDiposit);
+          var totalDiposit = currentDipositNumber + dipostiAmountNumber;
+          var currentDiposit = document.getElementById("currentDiposit").innerText = totalDiposit;
+          document.getElementById("diposit").value = "0"; // when submit value then submit amount refresh 0
          
-          cardBlanceShow("currentDiposit",dipostiAmountNumber);
-           document.getElementById("diposit").value = "0"; // when submit value then submit amount refresh 0
+
           // // currentBlance Add 
           // var CardBlance = document.getElementById("currentBlance").innerText;
           // var CardBlance = parseFloat(CardBlance);
@@ -57,7 +56,7 @@
           
         // });
 
-        
+        cardBlanceShow("",)
 
          
         // Blance section code 
