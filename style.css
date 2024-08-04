@@ -6,8 +6,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  background-color:rgb(0 0 0);
-  /* Fallback background color */
+  background-color: rgb(0, 0, 0);
 }
 
 body::before {
@@ -22,120 +21,125 @@ body::before {
   background-size: cover;
   background-position: center;
   opacity: 0.5;
-  /* Set the opacity for the background image */
   z-index: -1;
-  /* Layer below the content */
 }
 
-
-/* #background-video {
- position: absolute;
- top: 50%;
- left: 50%;
- width: 100%;
- height: 100%;
- object-fit: cover;
- transform: translate(-50%, -50%);
- z-index: -1;
-} */
-
 .login-area {
- display: flex;
- flex-direction: column;
- align-items: center;
- z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
 }
 
 .login-form-area {
- width: 31.25rem;
- padding: 2.5rem;
- border-radius: 0.625rem;
- box-shadow: 0.3125rem 0.3125rem 0.625rem #ffffff82;
- background-color: #ffffff54;
- text-align: center;
- display: block;
-
+  width: 100%;
+  max-width: 31.25rem;
+  padding: 2.5rem;
+  border-radius: 0.625rem;
+  box-shadow: 0.3125rem 0.3125rem 0.625rem #ffffff82;
+  background-color: #ffffff54;
+  text-align: center;
+  display: block;
 }
 
 .heading {
- margin-bottom: 1rem;
- color: rgba(255, 255, 255, 0.722);
- font-size: 5rem;
- font-weight: bold;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.722);
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
-.login-text {}
+@media (min-width: 768px) {
+  .heading {
+    font-size: 5rem;
+  }
+}
 
 #deshbord-aria {
- color: aliceblue;
- display: none;
+  color: aliceblue;
+  display: none;
 }
 
 .dashbordAria {
- width: 62.5rem;
+  width: 100%;
+  max-width: 62.5rem;
 }
 
 .blanceCard {
- padding: 1.25rem;
- border-radius: .625rem;
- box-shadow: 0.3125rem 0.3125rem 0.625rem #2e2a2a;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  box-shadow: 0.3125rem 0.3125rem 0.625rem #2e2a2a;
 }
 
 .diposit {
- background-color: #01af5ee3;
+  background-color: #01af5ee3;
 }
 
 .withdrow {
- background-color: #ef3b08ed;
+  background-color: #ef3b08ed;
 }
 
 .Credit {
- background-color: #ff7f00f5;
+  background-color: #ff7f00f5;
 }
 
 .card {
   background-color: #ececec78;
   padding: 3.25rem 2.7rem;
-
 }
 
 .card h5 {
- padding-bottom: 0.625rem;
- font-size: 30px;
- font-weight: 600;
- color: #fffaf0fc;
+  padding-bottom: 0.625rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fffaf0fc;
 }
-.card input{
- margin-bottom: 0.625rem;
+
+.card input {
+  margin-bottom: 0.625rem;
   padding: 12px;
   border-radius: 5px;
   border-style: none;
   background-color: #fff9;
 }
 
-.card textarea{margin-bottom: .625rem;
- padding: 16px;
- border-radius: 5px;
- border: none;
- fill: #cc2424;
- color: #fff8f8;
- background: #dddddd80;}
-/* mobile responsive code  */
+.card textarea {
+  margin-bottom: 0.625rem;
+  padding: 16px;
+  border-radius: 5px;
+  border: none;
+  fill: #cc2424;
+  color: #fff8f8;
+  background: #dddddd80;
+}
+
 @media (max-width: 480px) {
- .login-form-area {
-  padding: .625rem;
- }
+  .login-form-area {
+    padding: 1rem;
+  }
 
- h1 {
-  font-size: 1.25rem;
- }
+  .heading {
+    font-size: 2rem;
+  }
 
- h4 {
-  font-size: 1rem;
- }
+  h4 {
+    font-size: 1rem;
+  }
 
- input,
- button {
-  font-size: 0.875rem;
- }
+  input,
+  button {
+    font-size: 0.875rem;
+  }
+
+  .card {
+    padding: 1.5rem 1rem;
+  }
+
+  .card h5 {
+    font-size: 1.25rem;
+  }
+  .blanceCard{
+    margin: 0px 2.5rem;
+  }
+        
 }
