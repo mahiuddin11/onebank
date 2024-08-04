@@ -1,7 +1,7 @@
 
       // Set the playback rate to slow motion
-      var video = document.getElementById("background-video");
-      video.playbackRate = 0.4;
+      // var video = document.getElementById("background-video");
+      // video.playbackRate = 0.4;
 
       var loginBtn = document.getElementById("btnLogin");
       loginBtn.addEventListener("click", function () {
