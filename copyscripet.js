@@ -14,62 +14,73 @@
         //diposite hindlyer
         var addMonyBtn = document.getElementById("addMony");
         addMonyBtn.addEventListener("click", function () {
-          //amunt store
-          var dipostiAmount = document.getElementById("diposit").value; ///inpute fill value find p
-          var dipostiAmountNumber = parseFloat(dipostiAmount); // convert string to number usr parsefload function
+     
+          var dipostiAmount = getInputNumber("diposit");
+          // var dipostiAmount = document.getElementById("diposit").value; ///inpute fill value find p
+          // var dipostiAmountNumber = parseFloat(dipostiAmount); // convert string to number usr parsefload function
 
 
-          //diposide blance card find
-          var currentDiposit = document.getElementById("currentDiposit").innerText;
-          var currentDipositNumber = parseFloat(currentDiposit);
-          var totalDiposit = currentDipositNumber + dipostiAmountNumber;
-          var currentDiposit = document.getElementById("currentDiposit").innerText = totalDiposit;
-          document.getElementById("diposit").value = "0"; // when submit value then submit amount refresh 0
+          // //diposide blance card find
+          // var currentDiposit = document.getElementById("currentDiposit").innerText;
+          // var currentDipositNumber = parseFloat(currentDiposit);
+          // var totalDiposit = currentDipositNumber + dipostiAmountNumber;
+          // var currentDiposit = document.getElementById("currentDiposit").innerText = totalDiposit;
+          // document.getElementById("diposit").value = "0"; // when submit value then submit amount refresh 0
          
-
+          cardBlanceShow("currentDiposit",dipostiAmount);
+           document.getElementById("diposit").value = "0"; // when submit value then submit amount refresh 0
           // // currentBlance Add 
           // var CardBlance = document.getElementById("currentBlance").innerText;
           // var CardBlance = parseFloat(CardBlance);
           // var  totalBlance = CardBlance + dipostiAmountNumber ;
           // var currentDiposit = document.getElementById("currentBlance").innerText = totalBlance;
 
-          cardBlanceShow("currentBlance",dipostiAmountNumber);
+          cardBlanceShow("currentBlance",dipostiAmount);
 
         });
         
 
         // withdrow opction
-        // var withdrowMonyBtn = document.getElementById("withdrowMony");
-        // withdrowMonyBtn.addEventListener("click", function () {
-        //   var withdrawAmount = document.getElementById("withdrow").value;
-        //   withdrawAmount = parseFloat(withdrawAmount);
+        var withdrowMonyBtn = document.getElementById("withdrowMony");
+             withdrowMonyBtn.addEventListener("click", function () {
+
+             var withdrawAmount = getInputNumber("withdrow");
+             
+
+          // var withdrawAmount = document.getElementById("withdrow").value;
+          // var withdrawAmount = parseFloat(withdrawAmount);
           
+          // var withdrawCard_blance = document.getElementById("currentWithdrow").innerText;
+          // var withdrawCard_blance = parseFloat(withdrawCard_blance);
+          // var totalwithdrow = withdrawCard_blance + withdrawAmount;
+          // var withdrawCard_blance = document.getElementById("currentWithdrow").innerText = totalwithdrow;
 
-        //   var withdrawCard_blance = document.getElementById("currentWithdrow").innerText;
-        //   withdrawCard_blance = parseFloat(withdrawCard_blance);
+          cardBlanceShow("currentWithdrow",withdrawAmount);
+          document.getElementById("withdrow").value = "0"; // when submit value then submit amount refresh 0
 
-        //   var totalwithdrow = withdrawCard_blance + withdrawAmount;
-
-        //   var withdrawCard_blance = document.getElementById("currentWithdrow").innerText = totalwithdrow;
-        //   document.getElementById("withdrow").value = "0"; // when submit value then submit amount refresh 0
           
-          
-        // });
+        });
 
-        cardBlanceShow("",)
-
+        
          
         // Blance section code 
 
         //login section end
       });
 
+      //get inpute Number 
+      function getInputNumber(id){
+        var amount = document.getElementById(id).value;
+        var Amount = parseFloat(amount);
+        return Amount;
+      }
       // id = currentBlance
       function cardBlanceShow(id,amount){
         // currentBlance Add 
           var CardBlance = document.getElementById(id).innerText;
           var CardBlance = parseFloat(CardBlance);
           var  totalBlance = CardBlance + amount ;
-          var currentDiposit = document.getElementById(id).innerText = totalBlance;
+          var currentAmount = document.getElementById(id).innerText = totalBlance;
+          return currentAmount;
       }
     
