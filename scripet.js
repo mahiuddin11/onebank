@@ -28,7 +28,7 @@
           // document.getElementById("diposit").value = "0"; // when submit value then submit amount refresh 0
          
           cardBlanceShow("currentDiposit",dipostiAmount);
-           document.getElementById("diposit").value = "0"; // when submit value then submit amount refresh 0
+           document.getElementById("diposit").value = 0; // when submit value then submit amount refresh 0
           // // currentBlance Add 
           // var CardBlance = document.getElementById("currentBlance").innerText;
           // var CardBlance = parseFloat(CardBlance);
@@ -58,7 +58,7 @@
           // var withdrawCard_blance = document.getElementById("currentWithdrow").innerText = totalwithdrow;
 
           cardBlanceShow("currentWithdrow",withdrawAmount);
-          document.getElementById("withdrow").value = "0"; // when submit value then submit amount refresh 0
+          document.getElementById("withdrow").value = 0; // when submit value then submit amount refresh 0
 
            cardBlanceShow("currentBlance",withdrawAmount * -1); 
            cardTitle("currentBlance");
