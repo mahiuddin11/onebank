@@ -16,24 +16,9 @@
         addMonyBtn.addEventListener("click", function () {
      
           var dipostiAmount = getInputNumber("diposit");
-          // var dipostiAmount = document.getElementById("diposit").value; ///inpute fill value find p
-          // var dipostiAmountNumber = parseFloat(dipostiAmount); // convert string to number usr parsefload function
-
-
-          // //diposide blance card find
-          // var currentDiposit = document.getElementById("currentDiposit").innerText;
-          // var currentDipositNumber = parseFloat(currentDiposit);
-          // var totalDiposit = currentDipositNumber + dipostiAmountNumber;
-          // var currentDiposit = document.getElementById("currentDiposit").innerText = totalDiposit;
-          // document.getElementById("diposit").value = "0"; // when submit value then submit amount refresh 0
          
           cardBlanceShow("currentDiposit",dipostiAmount);
            document.getElementById("diposit").value = 0; // when submit value then submit amount refresh 0
-          // // currentBlance Add 
-          // var CardBlance = document.getElementById("currentBlance").innerText;
-          // var CardBlance = parseFloat(CardBlance);
-          // var  totalBlance = CardBlance + dipostiAmountNumber ;
-          // var currentDiposit = document.getElementById("currentBlance").innerText = totalBlance;
          
           cardBlanceShow("currentBlance",dipostiAmount);
           cardTitle("currentBlance");
@@ -47,15 +32,6 @@
              withdrowMonyBtn.addEventListener("click", function () {
 
              var withdrawAmount = getInputNumber("withdrow");
-             
-
-          // var withdrawAmount = document.getElementById("withdrow").value;
-          // var withdrawAmount = parseFloat(withdrawAmount);
-          
-          // var withdrawCard_blance = document.getElementById("currentWithdrow").innerText;
-          // var withdrawCard_blance = parseFloat(withdrawCard_blance);
-          // var totalwithdrow = withdrawCard_blance + withdrawAmount;
-          // var withdrawCard_blance = document.getElementById("currentWithdrow").innerText = totalwithdrow;
 
           cardBlanceShow("currentWithdrow",withdrawAmount);
           document.getElementById("withdrow").value = 0; // when submit value then submit amount refresh 0
