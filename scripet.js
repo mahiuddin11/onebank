@@ -34,8 +34,10 @@
           // var CardBlance = parseFloat(CardBlance);
           // var  totalBlance = CardBlance + dipostiAmountNumber ;
           // var currentDiposit = document.getElementById("currentBlance").innerText = totalBlance;
-
+         
           cardBlanceShow("currentBlance",dipostiAmount);
+          cardTitle("currentBlance");
+           
 
         });
         
@@ -59,15 +61,33 @@
           document.getElementById("withdrow").value = "0"; // when submit value then submit amount refresh 0
 
            cardBlanceShow("currentBlance",withdrawAmount * -1); 
-          
+           cardTitle("currentBlance");
+ 
         });
 
         
          
         // Blance section code 
-
+        
         //login section end
       });
+          
+      // cardTitel Change function
+      function cardTitle(id){
+        var cardCurrentBlance = document.getElementById(id).innerText;
+        var cardCurrentBlance = parseFloat(cardCurrentBlance);
+        
+        if(cardCurrentBlance < 0){
+          document.getElementById('cardTitel').innerText = "Debit Blance"; 
+        }else if(cardCurrentBlance > 0){
+
+          document.getElementById('cardTitel').innerText = "Cradit Blance"; 
+          
+        }
+        
+          
+      }
+
 
       //get inpute Number 
       function getInputNumber(id){
