@@ -58,6 +58,7 @@
           cardBlanceShow("currentWithdrow",withdrawAmount);
           document.getElementById("withdrow").value = "0"; // when submit value then submit amount refresh 0
 
+           cardBlanceShow("currentBlance",withdrawAmount * -1); 
           
         });
 

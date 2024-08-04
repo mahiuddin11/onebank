@@ -54,8 +54,9 @@
           // var withdrawCard_blance = parseFloat(withdrawCard_blance);
           // var totalwithdrow = withdrawCard_blance + withdrawAmount;
           // var withdrawCard_blance = document.getElementById("currentWithdrow").innerText = totalwithdrow;
-
+              
           cardBlanceShow("currentWithdrow",withdrawAmount);
+          
           document.getElementById("withdrow").value = "0"; // when submit value then submit amount refresh 0
 
           
